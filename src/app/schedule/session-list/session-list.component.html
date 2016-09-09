@@ -9,7 +9,7 @@
   </a>
 </nav>
 <section>
-  <article *ngFor="let session of sessions">
+  <article *ngFor="let session of sessions" (click)="onSessionClick(session.id)">
     <h2>{{ session.name }}</h2>
     <span></span>
   </article>

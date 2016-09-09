@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Speaker } from '../../shared/state/speaker';
 
 @Component({
   selector: 'app-speaker-details',
   templateUrl: './speaker-details.component.html',
   styleUrls: ['./speaker-details.component.css']
 })
-export class SpeakerDetailsComponent implements OnInit {
+export class SpeakerDetailsComponent {
+  @Input() speaker: Speaker;
+  @Output() backClick = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() {
+  onBackClick() {
+    this.backClick.emit();
   }
-
 }

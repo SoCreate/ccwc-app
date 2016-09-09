@@ -5,7 +5,17 @@
   *ngIf="mode === 1"
   [sessions]="(sessionsModel | async).sessions"
   [scheduleDate]="(sessionsModel | async).scheduleDate"
-  (dayClick)="onDayClick($event)"></app-session-list>
+  (dayClick)="onDayClick($event)"
+  (sessionClick)="onSessionClick($event)"></app-session-list>
+<app-session-details
+  *ngIf="mode === 4"
+  [session]="(sessionsModel | async).selectedSession"
+  (backClick)="onBackFromSessionClick()"></app-session-details>
 <app-speaker-list
   *ngIf="mode === 2"
-  [speakers]="speakers | async"></app-speaker-list>
+  [speakers]="(speakersModel | async).speakers"
+  (speakerClick)="onSpeakerClick($event)"></app-speaker-list>
+<app-speaker-details
+  *ngIf="mode === 3"
+  [speaker]="(speakersModel | async).selectedSpeaker"
+  (backClick)="onBackFromSpeakerClick()"></app-speaker-details>

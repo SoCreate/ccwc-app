@@ -1,6 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
-import { AppState } from '../../shared/state/app-state';
-import { Store } from '@ngrx/store';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,9 +8,6 @@ import { Store } from '@ngrx/store';
 export class HeaderComponent {
   @Input() mode;
   @Output() menuItemClick = new EventEmitter();
-
-  constructor(public store: Store<AppState>) {
-  }
 
   onMenuItemClick(mode) {
     this.menuItemClick.emit(mode);

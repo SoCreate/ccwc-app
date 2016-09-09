@@ -14,5 +14,7 @@ export interface AppState {
 
 export const enum Modes {
   Schedule = 1,
-  Speakers
+  Speakers,
+  Speaker,
+  Session
 }

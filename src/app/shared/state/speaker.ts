@@ -3,4 +3,5 @@ export interface Speaker {
   firstName: string;
   middleName: string;
   lastName: string;
+  bio: string;
 }

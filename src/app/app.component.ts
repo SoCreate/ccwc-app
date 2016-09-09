@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Speaker } from './shared/state/speaker';
-import { Session } from './shared/state/session';
 import { Observable } from 'rxjs';
-import { AppState, Modes } from './shared/state/app-state';
+import {
+  AppState,
+  Modes,
+  Speaker,
+  Session
+} from './shared';
 
 @Component({
   selector: 'app-root',
@@ -11,26 +14,37 @@ import { AppState, Modes } from './shared/state/app-state';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  speakers: Observable<Speaker[]>;
   mode;
   sessionsModel;
+  speakersModel;
 
   constructor(private store: Store<AppState>) {
-    this.sessionsModel = Observable.combineLatest(
-      this.store.select<Session[]>('sessions'),
-      this.store.select('scheduleDate'),
-      (sessions, scheduleDate) => {
-        return {
-          sessions: sessions.filter(session => session.date === scheduleDate),
-          scheduleDate
-        };
-      }
-    );
-    this.speakers = this.store.select<Speaker[]>('speakers');
     this.store.select<Modes>('mode')
       .subscribe(mode => {
         this.mode = mode;
       });
+    this.sessionsModel = Observable.combineLatest(
+      this.store.select<Session[]>('sessions'),
+      this.store.select('scheduleDate'),
+      this.store.select<string>('selectedSessionId'),
+      (sessions, scheduleDate, selectedSessionId) => {
+        return {
+          sessions: sessions.filter(session => session.date === scheduleDate),
+          scheduleDate,
+          selectedSession: sessions.find(session => session.id === selectedSessionId)
+        };
+      }
+    );
+    this.speakersModel = Observable.combineLatest(
+      this.store.select<Speaker[]>('speakers'),
+      this.store.select<string>('selectedSpeakerId'),
+      (speakers, selectedSpeakerId) => {
+        return {
+          speakers: speakers,
+          selectedSpeaker: speakers.find(speaker => speaker.id === selectedSpeakerId)
+        };
+      }
+    );
   }
 
   onMenuItemClick(mode) {
@@ -46,5 +60,25 @@ export class AppComponent {
 
   onDayClick(date) {
     this.store.dispatch({ type: 'VIEW_DAY', payload: date });
+  }
+
+  onSessionClick(sessionId) {
+    this.store.dispatch({ type: 'SELECT_SESSION_ID', payload: sessionId });
+    this.store.dispatch({ type: 'VIEW_SESSION' });
+  }
+
+  onSpeakerClick(speakerId) {
+    this.store.dispatch({ type: 'SELECT_SPEAKER_ID', payload: speakerId });
+    this.store.dispatch({ type: 'VIEW_SPEAKER' });
+  }
+
+  onBackFromSpeakerClick() {
+    this.store.dispatch({ type: 'CLEAR_SELECTED_SPEAKER_ID' });
+    this.store.dispatch({ type: 'VIEW_SPEAKERS' });
+  }
+
+  onBackFromSessionClick() {
+    this.store.dispatch({ type: 'CLEAR_SELECTED_SESSION_ID' });
+    this.store.dispatch({ type: 'VIEW_SCHEDULE' });
   }
 }
