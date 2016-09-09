@@ -3,70 +3,83 @@
   "sessions": [
     {
       "id": 1,
-      "name": "Creating Stunning Dialogue",
+      "name": "I Can't Believe I Wrote the Whole Thing",
       "date": "2016-09-30",
-      "description": "",
-      "startTimeUtc": "",
-      "endTimeUtc": "",
+      "description": "<p>Have you ever left a conference ready to write, and then life intervened with other priorities?  Promise yourself that won't happen this time.  Sam Horn will share inspiring insights on how to FINISH your book, successfully pitch it to agents and editors, and (finally) get it out of your head and into the world so it can make a positive difference for others and a prosperous living for you.</p><p>This is a hands-on keynote. You'll develop a timeline for completing your book and create an intriguing ‘elevator speech’ so next time someone (whether an agent, editor or new friend at the conference) asks, \"What's your book about?\" you have a clear, compelling response that elicits interest in your project.</p>",
+      "startTime": "10:00",
+      "endTime": "11:30",
       "categoryIds": [1],
-      "speakerIds": [1, 2]
+      "speakerIds": [1]
     },
     {
       "id": 2,
-      "name": "Success Hints",
+      "name": "Creating Stunning Dialogue",
       "date": "2016-09-30",
       "description": "",
-      "startTimeUtc": "",
-      "endTimeUtc": "",
-      "categoryIds": [1],
-      "speakerIds": [3, 4]
+      "startTime": "13:00",
+      "endTime": "13:50",
+      "categoryIds": [2],
+      "speakerIds": [2, 3]
     },
     {
       "id": 3,
-      "name": "Studio Pictures",
+      "name": "Success Hints",
       "date": "2016-09-30",
       "description": "",
-      "startTimeUtc": "",
-      "endTimeUtc": "",
-      "categoryIds": [1],
-      "speakerIds": [5, 6]
+      "startTime": "14:00",
+      "endTime": "15:00",
+      "categoryIds": [2],
+      "speakerIds": [4, 5]
     },
     {
       "id": 4,
+      "name": "Studio Pictures",
+      "date": "2016-09-30",
+      "description": "",
+      "startTime": "15:00",
+      "endTime": "16:00",
+      "categoryIds": [2],
+      "speakerIds": [6, 7]
+    },
+    {
+      "id": 5,
       "name": "Turning Your Novel into a Movie",
       "date": "2016-09-30",
       "description": "",
-      "startTimeUtc": "",
-      "endTimeUtc": "",
-      "categoryIds": [1],
-      "speakerIds": [7, 8]
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "categoryIds": [2],
+      "speakerIds": [8, 9]
     },
     {
-      "id": "5",
+      "id": 6,
       "name": "Creating Your Series Character",
       "date": "2016-10-01",
-      "description": "",
-      "startTimeUtc": "",
-      "endTimeUtc": "",
+      "description": "<p>Jack Reacher, Miss Marple, Zorro, Sherlock Holmes, John Shaft, the Cisco Kid, Modesty Blaze to Batman, what are the ingredients in creating a character you can build a series around and even more importantly, create a character that resonates with reads over the years? This workshop will examine the elements of notable character in prose and comics, analyzing at their similarities and the factors that makes them unique.  Part of the hour will them be devoted to the participants outlining the raw material for molding and shaping their own series character.</p>",
+      "startTime": "9:00",
+      "endTime": "10:00",
       "categoryIds": [],
-      "speakerIds": []
+      "speakerIds": [10]
     }
   ],
   "categories": [
-    { "id": 1, "name": "Writing for the Screen" },
-    { "id": 2, "name": "Beginning Writing" },
-    { "id": 3, "name": "Marketing" },
-    { "id": 4, "name": "Nonfiction" },
-    { "id": 5, "name": "The Business of Writing" }
+    { "id": 1, "name": "Opening Keynote Presentation" },
+    { "id": 2, "name": "Writing for the Screen" },
+    { "id": 3, "name": "Beginning Writing" },
+    { "id": 4, "name": "Marketing" },
+    { "id": 5, "name": "Nonfiction" },
+    { "id": 6, "name": "The Business of Writing" }
   ],
   "speakers": [
-    { "id": 1, "firstName": "Lawrence", "middleName": "H", "lastName": "Levy", "bio": "" },
-    { "id": 2, "firstName": "Nancy", "middleName": "", "lastName": "Holder", "bio": "" },
-    { "id": 3, "firstName": "Gene", "middleName": "", "lastName": "Perret", "bio": "" },
-    { "id": 4, "firstName": "Peter", "middleName": "", "lastName": "Dunne", "bio": "" },
-    { "id": 5, "firstName": "Rob", "middleName": "", "lastName": "Edwards", "bio": "" },
-    { "id": 6, "firstName": "Doug", "middleName": "", "lastName": "Richardson", "bio": "" },
-    { "id": 7, "firstName": "Lida", "middleName": "", "lastName": "Sideris", "bio": "" },
-    { "id": 8, "firstName": "Anne", "middleName": "", "lastName": "Perry", "bio": "" }
+    { "id": 1, "firstName": "Sam", "middleName": "", "lastName": "Horn", "bio": "<p>Sam Horn, Intrigue Expert and TEDx speaker, helps people create quality, one-of-a-kind projects that scale their impact for good.  Her work - including POP!, Tongue Fu! and the Washington Post bestseller Got Your Attention? - has been featured on NPR and MSNBC and in New York Times, Forbes, Fast Company, Readers Digest, INC.</p><p>As Former Executive Director of the Maui Writers Conference, she's helped thousands of people get their books out of their head and into the world where they've made a positive difference for others and a prosperous living for them. A few of her clients include Terry Jones (founder of Travelocity), Betsy Myers (COO of Obama's 2008 Presidential Campaign) and Charlie Pellerin (Project Manager for the Hubble Telescope).</p>" },
+    { "id": 2, "firstName": "Lawrence", "middleName": "H", "lastName": "Levy", "bio": "" },
+    { "id": 3, "firstName": "Nancy", "middleName": "", "lastName": "Holder", "bio": "" },
+    { "id": 4, "firstName": "Gene", "middleName": "", "lastName": "Perret", "bio": "" },
+    { "id": 5, "firstName": "Peter", "middleName": "", "lastName": "Dunne", "bio": "" },
+    { "id": 6, "firstName": "Rob", "middleName": "", "lastName": "Edwards", "bio": "" },
+    { "id": 7, "firstName": "Doug", "middleName": "", "lastName": "Richardson", "bio": "" },
+    { "id": 8, "firstName": "Lida", "middleName": "", "lastName": "Sideris", "bio": "" },
+    { "id": 9, "firstName": "Anne", "middleName": "", "lastName": "Perry", "bio": "" },
+    { "id": 10, "firstName": "Gary", "middleName": "", "lastName": "Phillips", "bio": "<p>Gary Phillips recent work includes The Long Night, a tie-in novella to the Wasteland 3 video game, and Vigilante: Southland Confidential miniseries for DC Comics. He is editor of the bestselling anthologies Black Pulp and Orange County Noir, and has short stories in Echoes of Sherlock Holmes, Crime +Music, and The Highway Kind.  His graphic novel The Rinse, about a money launderer, and his private eye character Nate Hollis, who premiered in comics in Angeltown and has crossed over to prose, have been optioned for television. Phillips is president of the Private Eye Writers of America and teaches in Antioch’s MFA creative writing program.</p>" }
   ]
 }
