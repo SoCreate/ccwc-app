@@ -1,5 +1,5 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
-import { Speaker } from '../../shared';
+import { Speaker } from '../../shared/state/speaker';
 
 @Component({
   selector: 'app-speaker-list',

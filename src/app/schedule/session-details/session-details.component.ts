@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Session } from '../../shared';
+import { Session } from '../../shared/state/session';
 
 @Component({
   selector: 'app-session-details',

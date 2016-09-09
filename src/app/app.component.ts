@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import {
-  AppState,
-  Modes,
-  Speaker,
-  Session
-} from './shared';
+import { AppState, Modes } from './shared/state/app-state';
+import { Session } from './shared/state/session';
+import { Speaker } from './shared/state/speaker';
 
 @Component({
   selector: 'app-root',
