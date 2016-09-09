@@ -1,8 +1,9 @@
 <a (click)="onBackClick()">Back</a>
-<span>{{ session.name }}</span>
-<article>
-  {{ session.description }}
-</article>
+<h1>{{ session.name }}</h1>
+<span>{{ session.startTime }} {{ session.endTime }}</span>
+<h2>Description</h2>
+<section [innerHTML]="session.description"></section>
+<h2>Speakers</h2>
 <ul>
   <li *ngFor="let speaker of session.speakers">
     <a (click)="onSpeakerClick(speaker.id)">{{ speaker.firstName }} {{ speaker.lastName }}</a>
