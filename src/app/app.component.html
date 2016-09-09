@@ -1,3 +1,11 @@
-<app-header (menuItemClick)="onMenuItemClick($event)" [mode]="mode"></app-header>
-<app-session-list *ngIf="mode === 1" [sessions]="sessions | async"></app-session-list>
-<app-speaker-list *ngIf="mode === 2" [speakers]="speakers | async"></app-speaker-list>
+<app-header
+  (menuItemClick)="onMenuItemClick($event)"
+  [mode]="mode"></app-header>
+<app-session-list
+  *ngIf="mode === 1"
+  [sessions]="(sessionsModel | async).sessions"
+  [scheduleDate]="(sessionsModel | async).scheduleDate"
+  (dayClick)="onDayClick($event)"></app-session-list>
+<app-speaker-list
+  *ngIf="mode === 2"
+  [speakers]="speakers | async"></app-speaker-list>

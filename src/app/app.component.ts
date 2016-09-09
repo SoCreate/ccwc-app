@@ -11,12 +11,21 @@ import { AppState, Modes } from './shared/state/app-state';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  sessions: Observable<Session[]>;
   speakers: Observable<Speaker[]>;
   mode;
+  sessionsModel;
 
   constructor(private store: Store<AppState>) {
-    this.sessions = this.store.select<Session[]>('sessions');
+    this.sessionsModel = Observable.combineLatest(
+      this.store.select<Session[]>('sessions'),
+      this.store.select('scheduleDate'),
+      (sessions, scheduleDate) => {
+        return {
+          sessions: sessions.filter(session => session.date === scheduleDate),
+          scheduleDate
+        };
+      }
+    );
     this.speakers = this.store.select<Speaker[]>('speakers');
     this.store.select<Modes>('mode')
       .subscribe(mode => {
@@ -33,5 +42,9 @@ export class AppComponent {
         this.store.dispatch({ type: 'VIEW_SPEAKERS' });
         break;
     }
+  }
+
+  onDayClick(date) {
+    this.store.dispatch({ type: 'VIEW_DAY', payload: date });
   }
 }

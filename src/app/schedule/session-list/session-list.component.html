@@ -1,9 +1,9 @@
 <nav>
-  <a>
+  <a (click)="onDayClick('2016-09-30')" [ngClass]="{ 'selected': scheduleDate === '2016-09-30'}">
     <span>Friday</span>
     <span>30th</span>
   </a>
-  <a>
+  <a (click)="onDayClick('2016-10-01')" [ngClass]="{ 'selected': scheduleDate === '2016-10-01'}">
     <span>Saturday</span>
     <span>1st</span>
   </a>
