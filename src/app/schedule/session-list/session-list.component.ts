@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Session } from '../../shared/state/session';
 
 @Component({
   selector: 'app-session-list',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./session-list.component.css']
 })
 export class SessionListComponent implements OnInit {
+  @Input() sessions: Session[];
 
   constructor() { }
 
