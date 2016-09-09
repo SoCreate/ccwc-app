@@ -1,8 +1,5 @@
 <section>
-  <article>
-    <h2></h2>
-    <ul>
-      <li></li>
-    </ul>
+  <article *ngFor="let speaker of speakers">
+    <h2>{{ speaker.firstName }} {{ speaker.lastName }}</h2>
   </article>
 </section>

@@ -10,10 +10,8 @@
   </a>
 </nav>
 <section>
-  <article>
+  <article *ngFor="let session of sessions">
+    <h2>{{ session.name }}</h2>
     <span datetime=""></span>
-    <ul>
-      <li></li>
-    </ul>
   </article>
 </section>
