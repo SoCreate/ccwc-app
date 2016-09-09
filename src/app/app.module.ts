@@ -10,11 +10,13 @@ import { SpeakerListComponent, SpeakerDetailsComponent } from './speakers';
 import { StoreModule } from '@ngrx/store';
 import { sessionsReducer } from './shared/state/sessions-reducer';
 import { speakerReducer } from './shared/state/speaker-reducer';
-import { Modes } from './shared/state/app-state';
+import { Modes, AppState } from './shared/state/app-state';
 import { modeReducer } from './shared/state/mode-reducer';
+import { scheduleDateReducer } from './shared/state/schedule-date-reducer';
 
-const initialState = require('./data/2016scheduledata.json');
+const initialState: AppState = require('./data/2016scheduledata.json');
 initialState.mode = Modes.Schedule;
+initialState.scheduleDate = '2016-09-30';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ initialState.mode = Modes.Schedule;
     StoreModule.provideStore({
         sessions: sessionsReducer,
         speakers: speakerReducer,
-        mode: modeReducer
+        mode: modeReducer,
+        scheduleDate: scheduleDateReducer
       },
       initialState)
   ],

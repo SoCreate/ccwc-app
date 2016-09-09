@@ -4,6 +4,7 @@
     {
       "id": 1,
       "name": "Creating Stunning Dialogue",
+      "date": "2016-09-30",
       "startTimeUtc": "",
       "endTimeUtc": "",
       "categoryIds": [1],
@@ -12,6 +13,7 @@
     {
       "id": 2,
       "name": "Success Hints",
+      "date": "2016-09-30",
       "startTimeUtc": "",
       "endTimeUtc": "",
       "categoryIds": [1],
@@ -20,6 +22,7 @@
     {
       "id": 3,
       "name": "Studio Pictures",
+      "date": "2016-09-30",
       "startTimeUtc": "",
       "endTimeUtc": "",
       "categoryIds": [1],
@@ -28,10 +31,20 @@
     {
       "id": 4,
       "name": "Turning Your Novel into a Movie",
+      "date": "2016-09-30",
       "startTimeUtc": "",
       "endTimeUtc": "",
       "categoryIds": [1],
       "speakerIds": [7, 8]
+    },
+    {
+      "id": "5",
+      "name": "Creating Your Series Character",
+      "date": "2016-10-01",
+      "startTimeUtc": "",
+      "endTimeUtc": "",
+      "categoryIds": [],
+      "speakerIds": []
     }
   ],
   "categories": [

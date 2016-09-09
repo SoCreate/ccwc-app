@@ -9,6 +9,7 @@ export interface AppState {
   selectedSessionId: string | null;
   selectedSpeakerId: string | null;
   mode: Modes;
+  scheduleDate: string;
 }
 
 export const enum Modes {
