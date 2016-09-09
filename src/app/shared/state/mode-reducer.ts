@@ -5,12 +5,8 @@ export const modeReducer: ActionReducer<Modes> = (state: Modes = Modes.Schedule,
   switch(action.type) {
     case 'VIEW_SCHEDULE':
       return Modes.Schedule;
-    case 'VIEW_SESSION':
-      return Modes.Session;
     case 'VIEW_SPEAKERS':
       return Modes.Speakers;
-    case 'VIEW_SPEAKER':
-      return Modes.Speaker;
     default:
       return state;
   }

@@ -10,8 +10,13 @@ import { Session } from '../../shared/state/session';
 export class SessionDetailsComponent {
   @Input() session: Session;
   @Output() backClick = new EventEmitter();
+  @Output() speakerClick = new EventEmitter();
 
   onBackClick() {
     this.backClick.emit();
+  }
+
+  onSpeakerClick(id) {
+    this.speakerClick.emit(id);
   }
 }

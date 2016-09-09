@@ -5,7 +5,7 @@
   {{ speaker.bio }}
 </article>
 <ul>
-  <li>
-    <a href=""></a>
+  <li *ngFor="let session of speaker.sessions">
+    <a (click)="onSessionClick(session.id)">{{ session.name }}</a>
   </li>
 </ul>
