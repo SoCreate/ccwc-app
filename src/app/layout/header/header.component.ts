@@ -1,17 +1,22 @@
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
-import { AppState } from '../../shared/state/app-state';
-import { Store } from '@ngrx/store';
+import { Component, EventEmitter, Output, Input, ChangeDetectionStrategy, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-header',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnChanges {
   @Input() mode;
   @Output() menuItemClick = new EventEmitter();
+  title;
 
-  constructor(public store: Store<AppState>) {
+  ngOnChanges(): void {
+    if(this.mode === 1) {
+      this.title = 'Schedule';
+    } else if (this.mode === 2) {
+      this.title = 'Speakers';
+    }
   }
 
   onMenuItemClick(mode) {

@@ -5,6 +5,7 @@
       "id": 1,
       "name": "Creating Stunning Dialogue",
       "date": "2016-09-30",
+      "description": "",
       "startTimeUtc": "",
       "endTimeUtc": "",
       "categoryIds": [1],
@@ -14,6 +15,7 @@
       "id": 2,
       "name": "Success Hints",
       "date": "2016-09-30",
+      "description": "",
       "startTimeUtc": "",
       "endTimeUtc": "",
       "categoryIds": [1],
@@ -23,6 +25,7 @@
       "id": 3,
       "name": "Studio Pictures",
       "date": "2016-09-30",
+      "description": "",
       "startTimeUtc": "",
       "endTimeUtc": "",
       "categoryIds": [1],
@@ -32,6 +35,7 @@
       "id": 4,
       "name": "Turning Your Novel into a Movie",
       "date": "2016-09-30",
+      "description": "",
       "startTimeUtc": "",
       "endTimeUtc": "",
       "categoryIds": [1],
@@ -41,6 +45,7 @@
       "id": "5",
       "name": "Creating Your Series Character",
       "date": "2016-10-01",
+      "description": "",
       "startTimeUtc": "",
       "endTimeUtc": "",
       "categoryIds": [],
@@ -55,13 +60,13 @@
     { "id": 5, "name": "The Business of Writing" }
   ],
   "speakers": [
-    { "id": 1, "firstName": "Lawrence", "middleName": "H", "lastName": "Levy" },
-    { "id": 2, "firstName": "Nancy", "middleName": "", "lastName": "Holder" },
-    { "id": 3, "firstName": "Gene", "middleName": "", "lastName": "Perret" },
-    { "id": 4, "firstName": "Peter", "middleName": "", "lastName": "Dunne" },
-    { "id": 5, "firstName": "Rob", "middleName": "", "lastName": "Edwards" },
-    { "id": 6, "firstName": "Doug", "middleName": "", "lastName": "Richardson" },
-    { "id": 7, "firstName": "Lida", "middleName": "", "lastName": "Sideris" },
-    { "id": 8, "firstName": "Anne", "middleName": "", "lastName": "Perry" }
+    { "id": 1, "firstName": "Lawrence", "middleName": "H", "lastName": "Levy", "bio": "" },
+    { "id": 2, "firstName": "Nancy", "middleName": "", "lastName": "Holder", "bio": "" },
+    { "id": 3, "firstName": "Gene", "middleName": "", "lastName": "Perret", "bio": "" },
+    { "id": 4, "firstName": "Peter", "middleName": "", "lastName": "Dunne", "bio": "" },
+    { "id": 5, "firstName": "Rob", "middleName": "", "lastName": "Edwards", "bio": "" },
+    { "id": 6, "firstName": "Doug", "middleName": "", "lastName": "Richardson", "bio": "" },
+    { "id": 7, "firstName": "Lida", "middleName": "", "lastName": "Sideris", "bio": "" },
+    { "id": 8, "firstName": "Anne", "middleName": "", "lastName": "Perry", "bio": "" }
   ]
 }

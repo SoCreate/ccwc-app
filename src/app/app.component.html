@@ -3,9 +3,21 @@
   [mode]="mode"></app-header>
 <app-session-list
   *ngIf="mode === 1"
-  [sessions]="(sessionsModel | async).sessions"
-  [scheduleDate]="(sessionsModel | async).scheduleDate"
-  (dayClick)="onDayClick($event)"></app-session-list>
+  [sessions]="sessions"
+  [scheduleDate]="scheduleDate"
+  (dayClick)="onDayClick($event)"
+  (sessionClick)="onSessionClick($event)"></app-session-list>
 <app-speaker-list
   *ngIf="mode === 2"
-  [speakers]="speakers | async"></app-speaker-list>
+  [speakers]="speakers"
+  (speakerClick)="onSpeakerClick($event)"></app-speaker-list>
+<app-session-details
+  *ngIf="selectedSession"
+  [session]="selectedSession"
+  (backClick)="onBackFromSessionClick()"
+  (speakerClick)="onSpeakerClick($event)"></app-session-details>
+<app-speaker-details
+  *ngIf="selectedSpeaker"
+  [speaker]="selectedSpeaker"
+  (backClick)="onBackFromSpeakerClick()"
+  (sessionClick)="onSessionClick($event)"></app-speaker-details>

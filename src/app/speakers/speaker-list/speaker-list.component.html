@@ -1,5 +1,5 @@
 <section>
-  <article *ngFor="let speaker of speakers">
+  <article *ngFor="let speaker of speakers" (click)="onSpeakerClick(speaker.id)">
     <h2>{{ speaker.firstName }} {{ speaker.lastName }}</h2>
   </article>
 </section>
