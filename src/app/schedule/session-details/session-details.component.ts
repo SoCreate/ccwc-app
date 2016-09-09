@@ -1,8 +1,9 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { Session } from '../../shared/state/session';
 
 @Component({
   selector: 'app-session-details',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './session-details.component.html',
   styleUrls: ['./session-details.component.css']
 })

@@ -1,8 +1,9 @@
-import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input, EventEmitter, Output, ChangeDetectionStrategy } from '@angular/core';
 import { Speaker } from '../../shared/state/speaker';
 
 @Component({
   selector: 'app-speaker-list',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './speaker-list.component.html',
   styleUrls: ['./speaker-list.component.css']
 })
