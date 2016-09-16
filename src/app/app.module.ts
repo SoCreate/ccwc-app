@@ -16,6 +16,8 @@ import { modeReducer } from './shared/state/mode-reducer';
 import { scheduleDateReducer } from './shared/state/schedule-date-reducer';
 import { selectedSpeakerIdReducer } from './shared/state/selected-speaker-id-reducer';
 import { selectedSessionIdReducer } from './shared/state/selected-session-id-reducer';
+import { StorageService } from './shared/storage.service';
+import { SessionListItemComponent } from './schedule/session-list-item/session-list-item.component';
 
 const initialState: AppState = require('./data/2016scheduledata.json');
 initialState.mode = Modes.Schedule;
@@ -28,7 +30,8 @@ initialState.scheduleDate = '2016-09-30';
     SessionListComponent,
     SpeakerListComponent,
     SpeakerDetailsComponent,
-    SessionDetailsComponent
+    SessionDetailsComponent,
+    SessionListItemComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,9 @@ initialState.scheduleDate = '2016-09-30';
       },
       initialState)
   ],
-  providers: [],
+  providers: [
+    StorageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

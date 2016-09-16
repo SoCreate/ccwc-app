@@ -10,4 +10,5 @@ export interface Session {
   categoryIds: number[];
   speakerIds: number[];
   speakers: Speaker[] | null;
+  isFavorite: boolean;
 }

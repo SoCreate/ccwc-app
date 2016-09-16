@@ -69,6 +69,10 @@ export class AppComponent {
     this.store.dispatch({type: 'SELECT_SESSION_ID', payload: sessionId});
   }
 
+  onToggleFavoriteClick(sessionId) {
+    this.store.dispatch({type: 'TOGGLE_FAVORITE_SESSION', payload: sessionId});
+  }
+
   onSpeakerClick(speakerId) {
     this.store.dispatch({type: 'SELECT_SPEAKER_ID', payload: speakerId});
   }

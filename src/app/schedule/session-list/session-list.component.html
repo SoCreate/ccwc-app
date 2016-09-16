@@ -8,15 +8,12 @@
     <span>1st</span>
   </a>
 </nav>
-<section *ngIf="scheduleDate === '2016-09-30'">
-  <article *ngFor="let session of fridaySessions" (click)="onSessionClick(session.id)">
-    <h2>{{ session.name }}</h2>
-    <span></span>
-  </article>
-</section>
-<section *ngIf="scheduleDate === '2016-10-01'">
-  <article *ngFor="let session of saturdaySessions" (click)="onSessionClick(session.id)">
-    <h2>{{ session.name }}</h2>
-    <span></span>
-  </article>
+<section>
+  <template ngFor let-session [ngForOf]="sessions">
+    <article appSessionListItem
+             *ngIf="session.date === scheduleDate"
+             [session]="session"
+             (sessionClick)="onSessionClick($event)"
+             (toggleFavoriteClick)="onToggleFavoriteClick($event)"></article>
+  </template>
 </section>

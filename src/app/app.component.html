@@ -6,7 +6,8 @@
   [sessions]="sessions"
   [scheduleDate]="scheduleDate"
   (dayClick)="onDayClick($event)"
-  (sessionClick)="onSessionClick($event)"></app-session-list>
+  (sessionClick)="onSessionClick($event)"
+  (toggleFavoriteClick)="onToggleFavoriteClick($event)"></app-session-list>
 <app-speaker-list
   *ngIf="mode === 2"
   [speakers]="speakers"

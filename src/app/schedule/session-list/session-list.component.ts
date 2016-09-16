@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Output, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component, Input, EventEmitter, Output, ChangeDetectionStrategy } from '@angular/core';
 import { Session } from '../../shared/state/session';
 
 @Component({
@@ -7,18 +7,12 @@ import { Session } from '../../shared/state/session';
   templateUrl: './session-list.component.html',
   styleUrls: ['./session-list.component.css']
 })
-export class SessionListComponent implements OnInit {
+export class SessionListComponent {
   @Input() sessions: Session[];
   @Input() scheduleDate: string;
   @Output() dayClick = new EventEmitter();
   @Output() sessionClick = new EventEmitter();
-  fridaySessions;
-  saturdaySessions;
-
-  ngOnInit(): void {
-    this.fridaySessions = this.sessions.filter(session => session.date === '2016-09-30');
-    this.saturdaySessions = this.sessions.filter(session => session.date === '2016-10-01');
-  }
+  @Output() toggleFavoriteClick = new EventEmitter();
 
   onDayClick(date) {
     this.dayClick.emit(date);
@@ -26,5 +20,9 @@ export class SessionListComponent implements OnInit {
 
   onSessionClick(id) {
     this.sessionClick.emit(id);
+  }
+
+  onToggleFavoriteClick(id) {
+    this.toggleFavoriteClick.emit(id);
   }
 }
